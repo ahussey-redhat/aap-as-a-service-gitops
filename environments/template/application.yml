@@ -12,7 +12,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: aap-instance/overlays/stable-2.4
+    path: environments/<change-me>
     repoURL: >-
       https://github.com/ahussey-redhat/aap-as-a-service-gitops.git
     targetRevision: main

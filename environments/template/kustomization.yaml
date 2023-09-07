@@ -4,4 +4,12 @@ namespace: <change-me>
 metadata:
   name: kustomization-file
 resources:
-  - aap-operator.yml
+  - ../aap-instance/overlays/stable-2.4
+patches:
+  - target:
+      kind: AutomationController
+      name: <change-me>
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: 'stable-2.4'
