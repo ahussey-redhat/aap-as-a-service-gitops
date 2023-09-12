@@ -2,7 +2,7 @@
 apiVersion: automationcontroller.ansible.com/v1beta1
 kind: AutomationController
 metadata:
-  name: <change-me>
+  name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}
 spec:
   postgres_keepalives_count: 5
   postgres_keepalives_idle: 5
