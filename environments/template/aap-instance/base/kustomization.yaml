@@ -4,3 +4,4 @@ resources:
   - operatorgroup.yml
   - subscription.yml
   - instance.yml
+  - rolebinding.yml
