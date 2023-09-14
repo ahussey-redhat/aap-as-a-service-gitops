@@ -1,0 +1,11 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: openshift-ansible-automation-platform
+  namespace: ${BRANCH_NAME}-${TEAM_NAME}
+spec:
+  targetNamespaces:
+    - ${BRANCH_NAME}-${TEAM_NAME}
