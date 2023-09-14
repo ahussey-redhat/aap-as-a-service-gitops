@@ -30,4 +30,4 @@ spec:
   admin_email: admin@example.com
   web_replicas: 3
   task_replicas: 3
-  route_host: testbranch-testteam-1.apps.k8s.sandbox1017.opentlc.com
+  route_host: testbranch-testteam-1-controller.apps.k8s.sandbox1017.opentlc.com
