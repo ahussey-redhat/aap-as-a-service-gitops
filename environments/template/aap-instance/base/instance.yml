@@ -30,4 +30,4 @@ spec:
   admin_email: admin@example.com
   web_replicas: 3
   task_replicas: 3
-  route_host: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-controller.apps.k8s.sandbox1017.opentlc.com
+  route_host: ${TEAM_NAME}-controller-${INSTANCE_ID}.apps.k8s.sandbox1017.opentlc.com
