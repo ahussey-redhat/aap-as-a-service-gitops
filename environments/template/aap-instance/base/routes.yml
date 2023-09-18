@@ -1,0 +1,26 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-sandbox
+  name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}
+  namespace: testbranch-testteam
+  labels:
+    app.kubernetes.io/component: automationcontroller
+    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/operator-version: ''
+    app.kubernetes.io/part-of: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}
+spec:
+  host: ${TEAM_NAME}-controller-${INSTANCE_ID}.apps.k8s.sandbox1017.opentlc.com
+  to:
+    kind: Service
+    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-service
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
