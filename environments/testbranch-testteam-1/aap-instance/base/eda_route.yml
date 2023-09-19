@@ -10,6 +10,8 @@ metadata:
     app.kubernetes.io/managed-by: eda-operator
     app.kubernetes.io/part-of: testbranch-testteam-1-eda
     app.kubernetes.io/name: testbranch-testteam-1-eda
+    app.kubernetes.io/instance: testbranch-testteam-1
+    app.kubernetes.io/operator-version: '2.4'
 spec:
   host: testteam-eda-1.apps.k8s.sandbox1017.opentlc.com
   to:
