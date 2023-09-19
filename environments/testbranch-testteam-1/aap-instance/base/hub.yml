@@ -14,7 +14,7 @@ spec:
   route_host: testteam-hub-1.apps.k8s.sandbox1017.opentlc.com
   loadbalancer_port: 80
   no_log: true
-  file_storage_size: 100Gi
+  file_storage_size: 1Gi
   image_pull_policy: IfNotPresent
   nginx_proxy_read_timeout: 120s
   gunicorn_timeout: 90
