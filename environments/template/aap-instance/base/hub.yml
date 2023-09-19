@@ -23,7 +23,7 @@ spec:
     replicas: 1
   nginx_proxy_connect_timeout: 120s
   haproxy_timeout: 180s
-  file_storage_access_mode: ReadWriteMany
+  file_storage_access_mode: ReadWriteOnce
   content:
     log_level: INFO
     replicas: 2
