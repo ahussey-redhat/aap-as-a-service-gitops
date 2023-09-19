@@ -7,15 +7,14 @@ metadata:
     cert-manager.io/issuer-name: letsencrypt-sandbox
   name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-hub
   labels:
-    app.kubernetes.io/component: automationcontroller
-    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/managed-by: hub-operator
     app.kubernetes.io/operator-version: ''
     app.kubernetes.io/part-of: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-hub
 spec:
-  host: ${TEAM_NAME}-controller-${INSTANCE_ID}.${APP_URL}
+  host: ${TEAM_NAME}-hub-${INSTANCE_ID}.${APP_URL}
   to:
     kind: Service
-    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-hub-service
+    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-hub-api-svc
     weight: 100
   port:
     targetPort: http

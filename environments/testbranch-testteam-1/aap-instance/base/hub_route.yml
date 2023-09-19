@@ -7,15 +7,14 @@ metadata:
     cert-manager.io/issuer-name: letsencrypt-sandbox
   name: testbranch-testteam-1-hub
   labels:
-    app.kubernetes.io/component: automationcontroller
-    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/managed-by: hub-operator
     app.kubernetes.io/operator-version: ''
     app.kubernetes.io/part-of: testbranch-testteam-1-hub
 spec:
-  host: testteam-controller-1.apps.k8s.sandbox1017.opentlc.com
+  host: testteam-hub-1.apps.k8s.sandbox1017.opentlc.com
   to:
     kind: Service
-    name: testbranch-testteam-1-service
+    name: testbranch-testteam-1-hub-api-svc
     weight: 100
   port:
     targetPort: http
