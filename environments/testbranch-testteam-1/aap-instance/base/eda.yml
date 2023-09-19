@@ -2,7 +2,7 @@
 apiVersion: eda.ansible.com/v1alpha1
 kind: EDA
 metadata:
-  name: testbranch-testteam-1-hub
+  name: testbranch-testteam-1-eda
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
