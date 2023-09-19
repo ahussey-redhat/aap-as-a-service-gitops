@@ -8,7 +8,6 @@ metadata:
   name: testbranch-testteam-1-eda
   labels:
     app.kubernetes.io/managed-by: eda-operator
-    app.kubernetes.io/operator-version: ''
     app.kubernetes.io/part-of: testbranch-testteam-1-eda
     app.kubernetes.io/name: testbranch-testteam-1-eda
 spec:
