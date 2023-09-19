@@ -15,7 +15,7 @@ spec:
   host: ${TEAM_NAME}-eda-${INSTANCE_ID}.${APP_URL}
   to:
     kind: Service
-    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-service
+    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda-service
     weight: 100
   port:
     targetPort: http
