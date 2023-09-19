@@ -5,3 +5,7 @@ resources:
   - subscription.yml
   - instance.yml
   - rolebinding.yml
+  - controller.yml
+  - controller_route.yml
+  - hub.yml
+  - eda.yml
