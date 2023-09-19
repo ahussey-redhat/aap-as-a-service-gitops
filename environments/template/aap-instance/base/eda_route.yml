@@ -7,15 +7,15 @@ metadata:
     cert-manager.io/issuer-name: letsencrypt-sandbox
   name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda
   labels:
-    app.kubernetes.io/component: automationcontroller
-    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/managed-by: eda-operator
     app.kubernetes.io/operator-version: ''
     app.kubernetes.io/part-of: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda
+    app.kubernetes.io/name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda
 spec:
   host: ${TEAM_NAME}-eda-${INSTANCE_ID}.${APP_URL}
   to:
     kind: Service
-    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda-service
+    name: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda-ui
     weight: 100
   port:
     targetPort: http

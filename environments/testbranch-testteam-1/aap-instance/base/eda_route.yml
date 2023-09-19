@@ -7,15 +7,15 @@ metadata:
     cert-manager.io/issuer-name: letsencrypt-sandbox
   name: testbranch-testteam-1-eda
   labels:
-    app.kubernetes.io/component: automationcontroller
-    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/managed-by: eda-operator
     app.kubernetes.io/operator-version: ''
     app.kubernetes.io/part-of: testbranch-testteam-1-eda
+    app.kubernetes.io/name: testbranch-testteam-1-eda
 spec:
   host: testteam-eda-1.apps.k8s.sandbox1017.opentlc.com
   to:
     kind: Service
-    name: testbranch-testteam-1-service
+    name: testbranch-testteam-1-eda-ui
     weight: 100
   port:
     targetPort: http

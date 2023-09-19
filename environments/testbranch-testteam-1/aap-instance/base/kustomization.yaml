@@ -8,3 +8,4 @@ resources:
   - controller_route.yml
   - hub.yml
   - eda.yml
+  - eda_route.yml
