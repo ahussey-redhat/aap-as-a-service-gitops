@@ -9,6 +9,7 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: hub-operator
     app.kubernetes.io/part-of: testbranch-testteam-1-hub
+    app.kubernetes.io/instance: testbranch-testteam-1
 spec:
   host: testteam-hub-1.apps.k8s.sandbox1017.opentlc.com
   to:
