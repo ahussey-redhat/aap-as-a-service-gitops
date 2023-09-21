@@ -9,6 +9,9 @@ subjects:
   - kind: ServiceAccount
     name: deployer
     namespace: aap-as-a-service
+  - kind: ServiceAccount
+    name: pipeline
+    namespace: aap-as-a-service
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
