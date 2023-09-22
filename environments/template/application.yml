@@ -10,7 +10,7 @@ metadata:
     servicenowincidentid: ${SERVICE_NOW_INCIDENT_ID}
     owner: ${OWNER}
   finalizers:
-    - "resources-finalizer.argocd.argoproj.io"
+    - "resources-finalizer.argocd.argoproj.io/background"
 spec:
   destination:
     namespace: ${BRANCH_NAME}-${TEAM_NAME}
