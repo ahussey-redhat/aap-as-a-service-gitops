@@ -1,0 +1,27 @@
+---
+apiVersion: eda.ansible.com/v1alpha1
+kind: EDA
+metadata:
+  name: undefined-undefined-1-eda
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  route_tls_termination_mechanism: Edge
+  ingress_type: Route
+  route_host: undefined-eda-1.apps.k8s.sandbox1760.opentlc.com
+  loadbalancer_port: 80
+  no_log: true
+  image_pull_policy: IfNotPresent
+  ui:
+    replicas: 1
+  set_self_labels: true
+  api:
+    gunicorn_workers: 2
+    replicas: 1
+  redis:
+    replicas: 1
+  admin_user: admin
+  loadbalancer_protocol: http
+  worker:
+    replicas: 2
+  automation_server_url: https://undefined-controller-1.apps.k8s.sandbox1760.opentlc.com

@@ -1,0 +1,26 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-sandbox
+  name: undefined-undefined-1-eda
+  labels:
+    app.kubernetes.io/managed-by: eda-operator
+    app.kubernetes.io/part-of: undefined-undefined-1-eda
+    app.kubernetes.io/name: undefined-undefined-1-eda
+    app.kubernetes.io/operator-version: '2.4'
+    app.kubernetes.io/instance: ${BRANCH_NAME}-${TEAM_NAME}-${INSTANCE_ID}-eda
+spec:
+  host: undefined-eda-1.apps.k8s.sandbox1760.opentlc.com
+  to:
+    kind: Service
+    name: undefined-undefined-1-eda-ui
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

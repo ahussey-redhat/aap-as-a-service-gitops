@@ -1,0 +1,34 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: undefined-undefined-1
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+  labels:
+    servicenowincidentid: 99d4de111badf110e07d43bdcc4bcb88
+    owner: 7905d3101b543110d8bf10ab274bcbcb
+  finalizers:
+    - "resources-finalizer.argocd.argoproj.io/background"
+spec:
+  destination:
+    namespace: undefined-undefined
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: environments/undefined-undefined-1
+    repoURL: >-
+      https://github.com/ahussey-redhat/aap-as-a-service-gitops.git
+    targetRevision: main
+  syncPolicy:
+    preserveResourcesOnDeletion: false
+    managedNamespaceMetadata:
+      labels:
+        argocd.argoproj.io/managed-by: "openshift-gitops"
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
