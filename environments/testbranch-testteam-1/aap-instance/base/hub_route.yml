@@ -5,6 +5,7 @@ metadata:
   annotations:
     cert-manager.io/issuer-kind: ClusterIssuer
     cert-manager.io/issuer-name: letsencrypt-sandbox
+    argocd.argoproj.io/sync-wave: "4"
   name: testbranch-testteam-1-hub
   labels:
     app.kubernetes.io/managed-by: hub-operator
