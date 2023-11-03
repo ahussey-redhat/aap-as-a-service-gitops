@@ -4,7 +4,7 @@ metadata:
   name: deployer-and-pipeline-admin
   namespace: ${BRANCH_NAME}-${TEAM_NAME}
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 subjects:
   - kind: ServiceAccount
     name: deployer
