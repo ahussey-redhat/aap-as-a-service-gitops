@@ -1,0 +1,26 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-sandbox
+    argocd.argoproj.io/sync-wave: "4"
+  name: d9d0a971c0a80a641c20b13d99a48576-5898f18a3b700300d901655593efc43a-1-controller
+  labels:
+    app.kubernetes.io/component: automationcontroller
+    app.kubernetes.io/managed-by: automationcontroller-operator
+    app.kubernetes.io/operator-version: ''
+    app.kubernetes.io/part-of: d9d0a971c0a80a641c20b13d99a48576-5898f18a3b700300d901655593efc43a-1-controller
+spec:
+  host: 5898f18a3b700300d901655593efc43a-controller-1.apps.cluster-ljlsm.ljlsm.sandbox1851.opentlc.com
+  to:
+    kind: Service
+    name: d9d0a971c0a80a641c20b13d99a48576-5898f18a3b700300d901655593efc43a-1-controller-service
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

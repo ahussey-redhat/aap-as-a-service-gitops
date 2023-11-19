@@ -1,0 +1,33 @@
+---
+apiVersion: automationcontroller.ansible.com/v1beta1
+kind: AutomationController
+metadata:
+  name: d9d0a971c0a80a641c20b13d99a48576-5898f18a3b700300d901655593efc43a-1-controller
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  postgres_keepalives_count: 5
+  postgres_keepalives_idle: 5
+  create_preload_data: true
+  route_tls_termination_mechanism: Edge
+  garbage_collect_secrets: true
+  ingress_type: Route
+  loadbalancer_port: 80
+  no_log: true
+  image_pull_policy: IfNotPresent
+  projects_storage_size: 8Gi
+  auto_upgrade: true
+  task_privileged: false
+  postgres_keepalives: true
+  postgres_keepalives_interval: 5
+  ipv6_disabled: false
+  projects_storage_access_mode: ReadWriteMany
+  set_self_labels: true
+  projects_persistence: false
+  replicas: 3
+  admin_user: admin
+  loadbalancer_protocol: http
+  admin_email: admin@example.com
+  web_replicas: 3
+  task_replicas: 3
+  route_host: 5898f18a3b700300d901655593efc43a-controller-1.apps.cluster-ljlsm.ljlsm.sandbox1851.opentlc.com
