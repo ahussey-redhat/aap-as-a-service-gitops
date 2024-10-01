@@ -4,4 +4,4 @@ namespace: ${BRANCH_NAME}-${TEAM_NAME}
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-  - aap-instance/overlays/stable-2.4
+  - aap-instance/overlays/stable-2.5
